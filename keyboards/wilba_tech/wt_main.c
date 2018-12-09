@@ -284,7 +284,6 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 	process_record_backlight(keycode, record);
 #endif // RGB_BACKLIGHT_ENABLED
 
-#ifdef ZEAL_FN_KEYS
 	switch(keycode) {
 		case FN_MO13:
 			if (record->event.pressed) {
@@ -307,7 +306,6 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 			return false;
 			break;
 	}
-#endif
 
 #ifdef DYNAMIC_KEYMAP_ENABLE
 	// Handle macros
