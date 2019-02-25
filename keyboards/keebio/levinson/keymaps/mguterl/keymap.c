@@ -25,6 +25,8 @@ enum custom_keycodes {
 #define SPC_NAV LT(_NAV, KC_SPC)
 #define ESC_CTL MT(MOD_LCTL, KC_ESC)
 #define TG_GAME TG(_GAMING)
+#define GO_BACK LGUI(KC_LBRC)
+#define GO_FWD  LGUI(KC_RBRC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -60,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NAV] =  LAYOUT_ortho_4x12( \
   _______, KC_MPLY, KC_MPRV, KC_MNXT, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______, \
   _______, KC_VOLD, KC_VOLU, KC_MUTE, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______, \
-  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
+  _______, _______, _______, _______, _______, _______, GO_BACK, GO_FWD,  _______, _______, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
 ),
 
