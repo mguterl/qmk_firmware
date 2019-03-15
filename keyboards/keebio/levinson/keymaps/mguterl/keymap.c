@@ -28,6 +28,17 @@ enum custom_keycodes {
 #define GO_BACK LGUI(KC_LBRC)
 #define GO_FWD  LGUI(KC_RBRC)
 
+#define GUI_1 LGUI(KC_1)
+#define GUI_2 LGUI(KC_2)
+#define GUI_3 LGUI(KC_3)
+#define GUI_4 LGUI(KC_4)
+#define GUI_5 LGUI(KC_5)
+#define GUI_6 LGUI(KC_6)
+#define GUI_7 LGUI(KC_7)
+#define GUI_8 LGUI(KC_8)
+#define GUI_9 LGUI(KC_9)
+#define GUI_0 LGUI(KC_0)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty
@@ -60,9 +71,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_NAV] =  LAYOUT_ortho_4x12( \
-  _______, KC_MPLY, KC_MPRV, KC_MNXT, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______, \
+  _______, GUI_1,   GUI_2,   GUI_3,   GUI_4,   GUI_5,   GUI_6,   GUI_7,   GUI_8,   GUI_9,   GUI_0,   _______, \
   _______, KC_VOLD, KC_VOLU, KC_MUTE, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______, \
-  _______, KC_F14,  KC_F15,  _______, _______, _______, GO_BACK, GO_FWD,  _______, _______, _______, _______, \
+  _______, KC_F14,  KC_F15,  _______, _______, _______, _______, GO_BACK, GO_FWD, _______, _______, _______, \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______ \
 ),
 
