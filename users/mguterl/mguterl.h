@@ -3,6 +3,7 @@
 
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
+#define KC_GRVF LT(_FKEYS, KC_GRV)
 
 /* Tap for Tab, hold for Hyper (Super+Ctrl+Shift+Alt) */
 #define HPR_TAB ALL_T(KC_TAB)
@@ -12,18 +13,26 @@
 
 /* Activate util layer while holding space */
 #define SPC_UTL LT(_UTIL, KC_SPC)
+#define SPC_NAV LT(_NAV, KC_SPC)
 
 /* Control when held, Escape when tapped */
 #define ESC_CTL MT(MOD_LCTL, KC_ESC)
 
-/* Toggle gaming layer */
+/* Toggle peristent layers */
 #define TG_GAME TG(_GAMING)
+#define TG_WIN  TG(_WINDOWS)
 
-/*
- * Make it easy to navigate back and forward in Chrome.
- */
+/* Navigate back and forward in Chrome */
 #define GO_BACK LGUI(KC_LBRC)
 #define GO_FWD  LGUI(KC_RBRC)
+
+/* Keybindings for Moom window movements */
+#define KC_SPLT HYPR(KC_J)
+#define KC_MAX  HYPR(KC_K)
+#define KC_SPRT HYPR(KC_L)
+
+/* Launch 1password mini in browser */
+#define KC_1PAS LGUI(KC_BSLS)
 
 /*
  * When using a 40% layout, these keycodes make it easy to change tabs in apps
@@ -45,23 +54,21 @@
  */
 enum ortho_layers {
   _QWERTY,
+  _WINDOWS,
   _GAMING,
+  _NAV,
   _UTIL,
-  _COLEMAK,
-  _DVORAK,
   _LOWER,
   _RAISE,
-  _PLOVER,
+  _FKEYS,
   _ADJUST
 };
 
 enum ortho_keycodes {
   QWERTY = SAFE_RANGE,
+  WINDOWS,
   GAMING,
+  NAV,
   UTIL,
-  COLEMAK,
-  DVORAK,
-  PLOVER,
   BACKLIT,
-  EXT_PLV
 };

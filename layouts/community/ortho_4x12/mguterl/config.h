@@ -1,5 +1,11 @@
 #pragma once
 
+// https://www.reddit.com/r/olkb/comments/8qppdn/qmk_issue_with_mt_when_typing_quickly/
+// #define IGNORE_MOD_TAP_INTERRUPT
+// I didn't need to undef these options to get the behavior that I was looking for.
+// #undef PERMISSIVE_HOLD
+// #undef PREVENT_STUCK_MODIFIERS
+
 #ifdef AUDIO_ENABLE
     #define STARTUP_SONG SONG(PLANCK_SOUND)
     // #define STARTUP_SONG SONG(NO_SOUND)
@@ -33,4 +39,3 @@
 
 // Most tactile encoders have detents every 4 stages
 #define ENCODER_RESOLUTION 4
-
