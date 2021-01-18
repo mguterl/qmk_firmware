@@ -22,6 +22,10 @@
 #define TG_GAME TG(_GAMING)
 #define TG_WIN  TG(_WINDOWS)
 
+// Back to default layer
+// Useful when switching from Windows + Gaming to Mac
+#define TO_DFLT TO(_QWERTY)
+
 /* Navigate back and forward in Chrome */
 #define GO_BACK LGUI(KC_LBRC)
 #define GO_FWD  LGUI(KC_RBRC)
